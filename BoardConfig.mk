@@ -28,8 +28,6 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RECOVERY := false
 TARGET_NO_KERNEL := false
 
-BOARD_USE_PREBUILT_KERNEL := true
-
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -148,3 +146,15 @@ BOARD_SEPOLICY_UNION += \
     genfs_contexts \
     property_contexts \
     service_contexts
+
+# Ubuntu bringup options
+# BOARD_UBUNTU_DEVICE_FLASH_SERVER_URL := http://system-image.ubuntu.com
+BOARD_UBUNTU_DEVICE_FLASH_CHANNEL := rc-proposed/ubuntu
+BOARD_UBUNTU_DEVICE_FLASH_DEVICE := generic
+# BOARD_UBUNTU_DEVICE_FLASH_VERSION :=
+
+BOARD_USE_LOCAL_INITRD := true
+BOARD_USE_PREBUILT_KERNEL := true
+
+# More additional space to allow debugging
+BOARD_SYSTEMIMAGE_PARTITION_PADDING=20485760
