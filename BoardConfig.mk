@@ -43,6 +43,7 @@ BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
 BOARD_KERNEL_CMDLINE += console=ttyHSL0,115200,n8
 BOARD_KERNEL_CMDLINE += coherent_pool=8M vmalloc=400M
+BOARD_KERNEL_CMDLINE += apparmor=0
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
